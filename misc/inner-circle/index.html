@@ -38,11 +38,6 @@
           </button>
         <a class="navbar-brand" href="#">Inner Circle 2016</a>
       </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-        </ul>
-      </div>
       <!--/.nav-collapse -->
     </div>
   </nav>
@@ -52,6 +47,8 @@
     <div class="starter-template">
       <h1>Inner Circle 2016 Rankings</h1>
       <p class="lead">Updated and maintained by Johan S (harass me if I'm late on updating <a href="mailto:johanstenberg92@gmail.com?Subject=Update%20Inner%20Circle%20Please!">here</a>)</p>
+
+      <p class="lead">If your score is wrong please <a href="mailto:johanstenberg92@gmail.com">email</a> me and I'll fix it, I also make mistakes!</p>
 
       <p class="lead" id="latest_game">Latest game update: </p>
       <div class="row">
@@ -77,16 +74,22 @@
 
   <script>
       $(document).ready(function() {
-          for (var i = 0; i < players.length; ++i) {
-              var placement = i + 1;
-              var player = players[i];
-              var name = player.name;
-              var score = player.score;
+        var placement = 1;
+        var latest_score = -1;
+          
+        for (var i = 0; i < players.length; ++i) {
+          var player = players[i];
+          var name = player.name;
+          var score = player.score;
 
-              $("#score_table").append("<tr><td align=\"left\">" + placement + "</td><td align=\"left\">" + score + "</td><td align=\"left\">" + name + "</tr>");
-          }
+          if (latest_score > score) placement = i + 1;
 
-          $("#latest_game").append(latest_game_update);
+          latest_score = score;
+
+          $("#score_table").append("<tr><td align=\"left\">" + placement + "</td><td align=\"left\">" + score + "</td><td align=\"left\">" + name + "</tr>");
+        }
+
+        $("#latest_game").append(latest_game_update);
       });
     </script>
 </body>

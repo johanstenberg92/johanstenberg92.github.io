@@ -1,10 +1,22 @@
 var players = [
     leif_better,
-    johan_better,
+    johan_s_better,
     carl_better,
     albin_better,
     alexander_better,
-    anders_better
+    anders_better,
+    andreas_better,
+    charlotta_better,
+    dan_erik_better,
+    david_better,
+    johan_c_better,
+    kholoud_better,
+    laleh_better,
+    markus_better,
+    martin_better,
+    paul_better,
+    torsten_better,
+    vittorio_better
 ];
 
-players = players.sort((a, b) => b.score - a.score);
+players = players.sort((a, b) => b.score - a.score)

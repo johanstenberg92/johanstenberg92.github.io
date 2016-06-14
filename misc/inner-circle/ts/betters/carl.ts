@@ -42,4 +42,4 @@ var carl_winner = "Sweden"
 // Top Scorer
 var carl_top_scorer = "Thomas Muller"
 
-var carl_better = new Better("Carl S", carl_bets, carl_winner, carl_top_scorer);
+var carl_better = new Better("Carl", carl_bets, carl_winner, carl_top_scorer);

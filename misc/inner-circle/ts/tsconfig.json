@@ -5,17 +5,30 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "outFile": "../js/tsc.js",
-        "sourceMap": true
+        "sourceMap": true,
+        "watch": true
     },
     "files": [
         "better.ts",
         "compute-score.ts",
-        "betters/johan.ts",
+        "betters/johan_s.ts",
         "betters/leif.ts",
         "betters/carl.ts",
         "betters/albin.ts",
         "betters/alexander.ts",
         "betters/anders.ts",
+        "betters/andreas.ts",
+        "betters/charlotta.ts",
+        "betters/dan_erik.ts",
+        "betters/david.ts",
+        "betters/johan_c.ts",
+        "betters/kholoud.ts",
+        "betters/laleh.ts",
+        "betters/markus.ts",
+        "betters/martin.ts",
+        "betters/paul.ts",
+        "betters/torsten.ts",
+        "betters/vittorio.ts",
         "results.ts"
     ]
 }
