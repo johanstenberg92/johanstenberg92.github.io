@@ -1,5 +1,7 @@
 var players = [
-    johan_better
+    leif_better,
+    johan_better,
+    carl_better
 ];
 
-players = players.sort((a, b) => a.score - b.score);
+players = players.sort((a, b) => b.score - a.score);

@@ -11,6 +11,8 @@
         "better.ts",
         "compute-score.ts",
         "betters/johan.ts",
+        "betters/leif.ts",
+        "betters/carl.ts",
         "results.ts"
     ]
 }

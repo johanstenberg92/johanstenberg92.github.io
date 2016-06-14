@@ -112,8 +112,90 @@ var johan_bets = [[1, 0],
 var johan_winner = "Germany";
 var johan_top_scorer = "Thomas Muller";
 var johan_better = new Better("Johan S", johan_bets, johan_winner, johan_top_scorer);
-var players = [
-    johan_better
+var leif_bets = [[2, 0],
+    [0, 2],
+    [2, 1],
+    [3, 1],
+    [1, 2],
+    [3, 1],
+    [2, 1],
+    [2, 0],
+    [1, 2],
+    [1, 1],
+    [2, 0],
+    [3, 0],
+    [1, 0],
+    [2, 1],
+    [3, 1],
+    [1, 1],
+    [3, 2],
+    [3, 2],
+    [1, 2],
+    [1, 2],
+    [3, 1],
+    [3, 0],
+    [1, 1],
+    [2, 2],
+    [1, 1],
+    [1, 1],
+    [2, 2],
+    [1, 4],
+    [2, 3],
+    [0, 4],
+    [1, 1],
+    [1, 2],
+    [1, 3],
+    [1, 3],
+    [2, 0],
+    [1, 1],
 ];
-players = players.sort(function (a, b) { return a.score - b.score; });
+var leif_winner = "Germany";
+var leif_top_scorer = "Thomas Muller";
+var leif_better = new Better("Leif", leif_bets, leif_winner, leif_top_scorer);
+var carl_bets = [[3, 0],
+    [1, 1],
+    [2, 0],
+    [2, 1],
+    [1, 2],
+    [1, 0],
+    [2, 0],
+    [2, 0],
+    [0, 2],
+    [2, 0],
+    [0, 0],
+    [2, 0],
+    [1, 0],
+    [0, 1],
+    [2, 1],
+    [4, 0],
+    [2, 2],
+    [2, 0],
+    [1, 1],
+    [0, 1],
+    [2, 1],
+    [2, 1],
+    [1, 1],
+    [2, 1],
+    [1, 0],
+    [1, 2],
+    [0, 0],
+    [1, 2],
+    [1, 1],
+    [0, 1],
+    [0, 0],
+    [2, 0],
+    [0, 0],
+    [1, 2],
+    [1, 0],
+    [3, 1],
+];
+var carl_winner = "Sweden";
+var carl_top_scorer = "Thomas Muller";
+var carl_better = new Better("Carl S", carl_bets, carl_winner, carl_top_scorer);
+var players = [
+    leif_better,
+    johan_better,
+    carl_better
+];
+players = players.sort(function (a, b) { return b.score - a.score; });
 //# sourceMappingURL=tsc.js.map
