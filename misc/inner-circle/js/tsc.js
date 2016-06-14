@@ -42,6 +42,7 @@ var current_results = [[2, 1],
     [],
     []
 ];
+var latest_game_update = "Belgium - Italy";
 var winner = undefined;
 var top_scorer = undefined;
 function compute_score(score_bets, winner_bet, top_scorer_bet) {

@@ -53,6 +53,7 @@
       <h1>Inner Circle 2016 Rankings</h1>
       <p class="lead">Updated and maintained by Johan S (harass me if I'm late on updating <a href="mailto:johanstenberg92@gmail.com?Subject=Update%20Inner%20Circle%20Please!">here</a>)</p>
 
+      <p class="lead" id="latest_game">Latest game update: </p>
       <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
@@ -84,6 +85,8 @@
 
               $("#score_table").append("<tr><td align=\"left\">" + placement + "</td><td align=\"left\">" + score + "</td><td align=\"left\">" + name + "</tr>");
           }
+
+          $("#latest_game").append(latest_game_update);
       });
     </script>
 </body>
