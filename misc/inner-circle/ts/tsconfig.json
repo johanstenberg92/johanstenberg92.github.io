@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "../js/tsc.js",
+        "sourceMap": true
+    },
+    "files": [
+        "better.ts",
+        "compute-score.ts",
+        "betters/johan.ts",
+        "results.ts"
+    ]
+}
