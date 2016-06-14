@@ -1,5 +1,4 @@
-var current_results = [
-  [2, 1], // #1 France - Albania
+var current_results = [[2, 1], // #1 France - Albania
   [0, 1], // #2 Albania - Switzerland
   [2, 1], // #3 Wales - Slovakia
   [1, 1], // #4 England - Russia
@@ -44,8 +43,8 @@ var top_scorer: string = undefined
 function compute_score(score_bets: number[][], winner_bet: string, top_scorer_bet: string) {
     var score = 0
 
-    if (winner != undefined && winner_bet == winner) score += 5;
-    if (top_scorer != undefined && top_scorer_bet == winner) score += 5;
+    if (winner != undefined && winner_bet == winner) score += 5
+    if (top_scorer != undefined && top_scorer_bet == winner) score += 5
 
     for (var i = 0; i < score_bets.length; ++i) {
         var bet = score_bets[i]
@@ -61,13 +60,13 @@ function compute_score(score_bets: number[][], winner_bet: string, top_scorer_be
             if (home_score == betted_home_score && away_score == betted_away_score) score += 3
             else {
                 // tie
-                if (home_score - away_score == betted_home_score - betted_away_score) score += 1
+                if ((home_score - away_score == 0) && (betted_home_score - betted_away_score == 0)) score += 1
 
                 // home win
                 if (home_score > away_score && betted_home_score > betted_away_score) score += 1
 
                 // away win
-                if (away_score > home_score && betted_away_score > betted_home_score) score += 1
+                if (home_score < away_score && betted_home_score < betted_away_score) score += 1
             }
         }
     }

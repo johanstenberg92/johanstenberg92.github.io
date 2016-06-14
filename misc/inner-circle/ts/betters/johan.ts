@@ -1,5 +1,4 @@
-var johan_bets = [
-  [1, 0], // #1 France - Albania
+var johan_bets = [[1, 0], // #1 France - Albania
   [0, 1], // #2 Albania - Switzerland
   [1, 1], // #3 Wales - Slovakia
   [1, 0], // #4 England - Russia
@@ -15,8 +14,8 @@ var johan_bets = [
   [1, 0], // #14 Switzerland - Romania
   [2, 0], // #15 France - Albania
   [1, 0], // #16 England - Wales
-  [2, 0], // #17 Ukraine - Northern Ireland
-  [1, 0], // #18 Germany - Poland
+  [1, 0], // #17 Ukraine - Northern Ireland
+  [2, 0], // #18 Germany - Poland
   [1, 0], // #19 Italy - Sweden
   [1, 1], // #20 Czech Republic - Croatia
   [1, 0], // #21 Spain - Turkey
@@ -43,4 +42,4 @@ var johan_winner = "Germany"
 // Top Scorer
 var johan_top_scorer = "Thomas Muller"
 
-var johan_better = new Better("johan", johan_bets, johan_winner, johan_top_scorer);
+var johan_better = new Better("Johan S", johan_bets, johan_winner, johan_top_scorer);
