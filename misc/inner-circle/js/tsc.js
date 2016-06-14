@@ -16,7 +16,7 @@ var current_results = [[2, 1],
     [1, 1],
     [0, 2],
     [0, 2],
-    [],
+    [1, 1],
     [],
     [],
     [],
@@ -42,7 +42,7 @@ var current_results = [[2, 1],
     [],
     []
 ];
-var latest_game_update = "Austria - Hungary (14th of June)";
+var latest_game_update = "Portugal - Iceland (14th of June)";
 var winner = undefined;
 var top_scorer = undefined;
 function compute_score(score_bets, winner_bet, top_scorer_bet) {
