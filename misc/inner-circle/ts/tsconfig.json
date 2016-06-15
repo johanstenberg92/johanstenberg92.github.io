@@ -30,6 +30,7 @@
         "betters/torsten.ts",
         "betters/vittorio.ts",
         "results.ts",
+        "group-results.ts",
         "colors.ts"
     ]
 }

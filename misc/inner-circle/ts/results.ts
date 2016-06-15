@@ -24,3 +24,14 @@ players = players.sort((a, b) => b.score - a.score)
 var max_score = players[0].score
 
 var step_size = Math.round(max_score / 10) + 1
+
+var group_results = group_statistics(players, current_results)
+
+var group_results_full = Array<number>(group_results.length)
+
+var group_results_partial = Array<number>(group_results.length)
+
+for (var i = 0; i < group_results.length; ++i) {
+    group_results_full[i] = group_results[i][0]
+    group_results_partial[i] = group_results[i][1]
+}

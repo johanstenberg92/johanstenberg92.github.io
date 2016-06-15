@@ -69,6 +69,17 @@
         </div>
       </div>
 
+      <h2>Aggregated Results</h2>
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <canvas height="50px" width="100%" id="aggregated-graph-canvas"></canvas>
+        </div>
+      </div>      
+
       <h2>Individual Score Graphs</h2>
 
       <br>
@@ -84,6 +95,48 @@
 
   <script>
       $(document).ready(function() {
+        var aggregationGraphCtx = $("#aggregated-graph-canvas");
+
+        var x_axis = [];
+
+        for (var i = 0; i < group_results.length; ++i) x_axis.push("" + (i + 1));
+
+        var aggregationChart = new Chart(aggregationGraphCtx, {
+          type: 'bar',
+          data: {
+            labels: x_axis,
+            datasets: [{
+              label: "Correct Score Bets",
+              backgroundColor: get_color(5)[1],
+              borderColor: get_color(5)[0],
+              borderWidth: 1,
+              hoverBackgroundColor: get_color(5)[0],
+              hoverBorderColor: "rgba(255,99,132,1)",
+              data: group_results_full
+            },
+            {
+              label: "Correct Win/Lose/Tie Bets",
+              backgroundColor: get_color(9)[1],
+              borderColor: get_color(9)[0],
+              borderWidth: 1,
+              hoverBackgroundColor: get_color(9)[0],
+              hoverBorderColor: "rgba(255,99,132,1)",
+              data: group_results_partial
+            }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+              	ticks: {
+                  min: 0,
+                  max: 20,
+                  stepSize: 2
+                }
+              }]
+            }
+          }
+        });
+
         var placement = 1;
         var latest_score = -1;
           
@@ -115,10 +168,6 @@
           );
 
           var ctx = $("#" + player_canvas_id);
-
-          var x_axis = [];
-
-          for (var j = 0; j < player.score_evolution.length; ++j) x_axis.push("" + (j + 1));
 
           var player_graph_color = get_color(i);
 
