@@ -37,7 +37,7 @@ var vittorio_bets = [[1, 0], // #1 France - Albania
 ];
 
 // Championship Winner
-var vittorio_winner = "Sweden"
+var vittorio_winner = "Italy"
 
 // Top Scorer
 var vittorio_top_scorer = "Antoine Griezmann"

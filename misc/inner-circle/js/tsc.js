@@ -807,7 +807,7 @@ var vittorio_bets = [[1, 0],
     [1, 0],
     [0, 2],
 ];
-var vittorio_winner = "Sweden";
+var vittorio_winner = "Italy";
 var vittorio_top_scorer = "Antoine Griezmann";
 var vittorio_better = new Better("Vittorio", vittorio_bets, vittorio_winner, vittorio_top_scorer);
 var players = [
