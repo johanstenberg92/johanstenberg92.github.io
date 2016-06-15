@@ -25,7 +25,7 @@ var current_results = [[2, 1],
     [1, 1],
     [1, 2],
     [1, 1],
-    [],
+    [2, 0],
     [],
     [],
     [],
@@ -48,7 +48,7 @@ var current_results = [[2, 1],
     [],
     []
 ];
-var latest_game_update = "Romania - Switzerland (15th of June)";
+var latest_game_update = "France - Albania (15th of June)";
 var winner = undefined;
 var top_scorer = undefined;
 function compute_winner_and_top_scorer_score(winner_bet, top_scorer_bet) {

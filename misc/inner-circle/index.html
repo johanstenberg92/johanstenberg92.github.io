@@ -199,7 +199,7 @@
                 yAxes: [{
                   ticks: {
                     min: 0,
-                    max: (max_score / step_size) * step_size + step_size,
+                    max: (Math.round((max_score / step_size)) * step_size) + step_size,
                     stepSize: step_size
                   }
                 }]
