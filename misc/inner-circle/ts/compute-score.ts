@@ -10,8 +10,8 @@ var current_results = [[2, 1], // #1 France - Albania
   [0, 2], // #10 Belgium - Italy
   [0, 2], // #11 Austria - Hungary
   [1, 1], // #12 Portugal - Iceland
-  [], // #13 Russia - Slovakia
-  [], // #14 Switzerland - Romania
+  [1, 2], // #13 Russia - Slovakia
+  [1, 1], // #14 Switzerland - Romania
   [], // #15 France - Albania
   [], // #16 England - Wales
   [], // #17 Ukraine - Northern Ireland
@@ -36,19 +36,26 @@ var current_results = [[2, 1], // #1 France - Albania
   [] // #36 Sweden - Belgium
 ];
 
-var latest_game_update = "Portugal - Iceland (14th of June)"
+var latest_game_update = "Romania - Switzerland (15th of June)"
 
 var winner: string = undefined
 
 var top_scorer: string = undefined
 
-function compute_score(score_bets: number[][], winner_bet: string, top_scorer_bet: string) {
+function compute_winner_and_top_scorer_score(winner_bet: string, top_scorer_bet: string) {
     var score = 0
 
     if (winner != undefined && winner_bet == winner) score += 5
     if (top_scorer != undefined && top_scorer_bet == winner) score += 5
 
+    return score
+}
+
+function compute_games_scores_evolution(score_bets: number[][]) {
+    var score_evolution = new Array<number>()
+
     for (var i = 0; i < score_bets.length; ++i) {
+        var score = 0;
         var bet = score_bets[i]
         var result = current_results[i]
 
@@ -59,19 +66,25 @@ function compute_score(score_bets: number[][], winner_bet: string, top_scorer_be
             var betted_home_score = bet[0]
             var betted_away_score = bet[1]
 
-            if (home_score == betted_home_score && away_score == betted_away_score) score += 3
+            if (home_score == betted_home_score && away_score == betted_away_score) score = 3
             else {
                 // tie
-                if ((home_score - away_score == 0) && (betted_home_score - betted_away_score == 0)) score += 1
+                if ((home_score - away_score == 0) && (betted_home_score - betted_away_score == 0)) score = 1
 
                 // home win
-                if (home_score > away_score && betted_home_score > betted_away_score) score += 1
+                if (home_score > away_score && betted_home_score > betted_away_score) score = 1
 
                 // away win
-                if (home_score < away_score && betted_home_score < betted_away_score) score += 1
+                if (home_score < away_score && betted_home_score < betted_away_score) score = 1
+            }
+            
+            if (score_evolution.length == 0) score_evolution.push(score)
+            else {
+                var last_score = score_evolution[score_evolution.length - 1]
+                score_evolution.push(last_score + score)
             }
         }
     }
 
-    return score;
+    return score_evolution
 }

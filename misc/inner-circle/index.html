@@ -5,9 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <title>Inner Circle EM 2016</title>
 
@@ -44,31 +41,44 @@
 
   <div class="container">
 
-    <div class="starter-template">
+    <div class="starter-template" id="main-container">
       <h1>Inner Circle 2016 Rankings</h1>
+      <br>
       <p class="lead">Updated and maintained by Johan S (harass me if I'm late on updating <a href="mailto:johanstenberg92@gmail.com?Subject=Update%20Inner%20Circle%20Please!">here</a>)</p>
 
       <p class="lead">If your score is wrong please <a href="mailto:johanstenberg92@gmail.com">email</a> me and I'll fix it, I also make mistakes!</p>
 
-      <p class="lead" id="latest_game">Latest game update: </p>
+      <p class="lead" id="latest-game">Latest game update: </p>
+
+      <h2>Current Standings</h2>
+
+      <br>
+
       <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-          <table class="table table_striped" id="score_table">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <table class="table table-striped" id="score-table">
             <tr>
               <th>Placement</th>
               <th>Score</th>
               <th>Name</th>
+              <th>Betted Winner</th>
+              <th>Betted Top Scorer</th>
             </tr>
           </table>
         </div>
       </div>
+
+      <h2>Individual Score Graphs</h2>
+
+      <br>
     </div>
 
   </div>
   <!-- /.container -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/misc/inner-circle/js/tsc.js"></script>
 
@@ -79,17 +89,66 @@
           
         for (var i = 0; i < players.length; ++i) {
           var player = players[i];
-          var name = player.name;
-          var score = player.score;
 
-          if (latest_score > score) placement = i + 1;
+          if (latest_score > player.score) placement = i + 1;
 
-          latest_score = score;
+          latest_score = player.score;
 
-          $("#score_table").append("<tr><td align=\"left\">" + placement + "</td><td align=\"left\">" + score + "</td><td align=\"left\">" + name + "</tr>");
+          $("#score-table").append(
+            "<tr>" + 
+            "<td align=\"left\">" + placement + "</td>" +
+            "<td align=\"left\"><b>" + player.score + "</b></td>" +
+            "<td align=\"left\">" + player.name + "</td>" +
+            "<td align=\"left\">" + player.winner + "</td>" +
+            "<td align=\"left\">" + player.top_scorer + "</td>" +
+            "</tr>"
+          );
+
+          var player_canvas_id = "player-canvas-" + i;
+
+          $("#main-container").append(
+            "<div class=\"row\">" +
+            "<div class=\"col-md-2\"></div><div class=\"col-md-8\">" +
+            "<canvas id=\"" + player_canvas_id + "\" height=\"50px\" width=\"100%\"></canvas>" +
+            "</div>" +
+            "</div>"
+          );
+
+          var ctx = $("#" + player_canvas_id);
+
+          var x_axis = [];
+
+          for (var j = 0; j < player.score_evolution.length; ++j) x_axis.push("" + (j + 1));
+
+          var player_graph_color = get_color(i);
+
+          var data = {
+            labels: x_axis,
+            datasets: [{
+            	label: player.name + " Score Evolution",
+              data: player.score_evolution,
+              fill: false,
+              backgroundColor: player_graph_color[1],
+              borderColor: player_graph_color[0],
+              pointBorderColor: player_graph_color[0],
+              pointBackgroundColor: "#fff",
+              lineTension: 0,
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: player_graph_color[0],
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointHitRadius: 10
+            }]
+          };
+
+          var myChart = new Chart(ctx, {
+            type: 'line',
+            data: data
+          });
         }
 
-        $("#latest_game").append(latest_game_update);
+        $("#latest-game").append(latest_game_update);
       });
     </script>
 </body>

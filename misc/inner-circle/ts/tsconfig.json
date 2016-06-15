@@ -29,6 +29,7 @@
         "betters/paul.ts",
         "betters/torsten.ts",
         "betters/vittorio.ts",
-        "results.ts"
+        "results.ts",
+        "colors.ts"
     ]
 }

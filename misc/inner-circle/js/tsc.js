@@ -1,7 +1,13 @@
 var Better = (function () {
     function Better(name, score_bets, winner, top_scorer) {
         this.name = name;
-        this.score = compute_score(score_bets, winner, top_scorer);
+        this.score_bets = score_bets;
+        this.winner = winner;
+        this.top_scorer = top_scorer;
+        this.score_evolution = compute_games_scores_evolution(score_bets);
+        if (this.score_evolution.length > 0)
+            this.score = this.score_evolution[this.score_evolution.length - 1];
+        this.score += compute_winner_and_top_scorer_score(winner, top_scorer);
     }
     return Better;
 }());
@@ -17,8 +23,8 @@ var current_results = [[2, 1],
     [0, 2],
     [0, 2],
     [1, 1],
-    [],
-    [],
+    [1, 2],
+    [1, 1],
     [],
     [],
     [],
@@ -42,16 +48,21 @@ var current_results = [[2, 1],
     [],
     []
 ];
-var latest_game_update = "Portugal - Iceland (14th of June)";
+var latest_game_update = "Romania - Switzerland (15th of June)";
 var winner = undefined;
 var top_scorer = undefined;
-function compute_score(score_bets, winner_bet, top_scorer_bet) {
+function compute_winner_and_top_scorer_score(winner_bet, top_scorer_bet) {
     var score = 0;
     if (winner != undefined && winner_bet == winner)
         score += 5;
     if (top_scorer != undefined && top_scorer_bet == winner)
         score += 5;
+    return score;
+}
+function compute_games_scores_evolution(score_bets) {
+    var score_evolution = new Array();
     for (var i = 0; i < score_bets.length; ++i) {
+        var score = 0;
         var bet = score_bets[i];
         var result = current_results[i];
         if (result.length != 0) {
@@ -60,18 +71,24 @@ function compute_score(score_bets, winner_bet, top_scorer_bet) {
             var betted_home_score = bet[0];
             var betted_away_score = bet[1];
             if (home_score == betted_home_score && away_score == betted_away_score)
-                score += 3;
+                score = 3;
             else {
                 if ((home_score - away_score == 0) && (betted_home_score - betted_away_score == 0))
-                    score += 1;
+                    score = 1;
                 if (home_score > away_score && betted_home_score > betted_away_score)
-                    score += 1;
+                    score = 1;
                 if (home_score < away_score && betted_home_score < betted_away_score)
-                    score += 1;
+                    score = 1;
+            }
+            if (score_evolution.length == 0)
+                score_evolution.push(score);
+            else {
+                var last_score = score_evolution[score_evolution.length - 1];
+                score_evolution.push(last_score + score);
             }
         }
     }
-    return score;
+    return score_evolution;
 }
 var johan_s_bets = [[1, 0],
     [0, 1],
@@ -814,4 +831,21 @@ var players = [
     vittorio_better
 ];
 players = players.sort(function (a, b) { return b.score - a.score; });
+var colors = [
+    ["rgba(51,161,201,1)", "rgba(51,161,201,0.4)"],
+    ["rgba(40,40,40,1)", "rgba(40,40,40,0.4)"],
+    ["rgba(238,118,33,1)", "rgba(238,118,33,0.4)"],
+    ["rgba(205,79,57,1)", "rgba(205,79,57,0.4)"],
+    ["rgba(255,193,37,1)", "rgba(255,193,37,0.4)"],
+    ["rgba(60,179,113,1)", "rgba(60,179,113,0.4)"],
+    ["rgba(131,111,255,1)", "rgba(131,111,255,0.4)"],
+    ["rgba(176,23,31,1)", "rgba(176,23,31,0.4)"],
+    ["rgba(0,255,255,1)", "rgba(0,255,255,0.4)"],
+    ["rgba(202,255,112,1)", "rgba(202,255,112,0.4)"],
+    ["rgba(238,169,184,1)", "rgba(238,169,184,0.4)"]
+];
+function get_color(index) {
+    var color_size = colors.length;
+    return colors[index % color_size];
+}
 //# sourceMappingURL=tsc.js.map
