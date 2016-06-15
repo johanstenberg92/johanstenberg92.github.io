@@ -831,6 +831,8 @@ var players = [
     vittorio_better
 ];
 players = players.sort(function (a, b) { return b.score - a.score; });
+var max_score = players[0].score;
+var step_size = Math.round(max_score / 10) + 1;
 var colors = [
     ["rgba(51,161,201,1)", "rgba(51,161,201,0.4)"],
     ["rgba(40,40,40,1)", "rgba(40,40,40,0.4)"],

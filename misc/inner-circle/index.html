@@ -125,7 +125,7 @@
           var data = {
             labels: x_axis,
             datasets: [{
-            	label: player.name + " Score Evolution",
+            	label: player.name,
               data: player.score_evolution,
               fill: false,
               backgroundColor: player_graph_color[1],
@@ -144,7 +144,18 @@
 
           var myChart = new Chart(ctx, {
             type: 'line',
-            data: data
+            data: data,
+            options: {
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    min: 0,
+                    max: (max_score / step_size) * step_size + step_size,
+                    stepSize: step_size
+                  }
+                }]
+              }
+            }
           });
         }
 

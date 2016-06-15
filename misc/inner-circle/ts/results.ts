@@ -20,3 +20,7 @@ var players = [
 ];
 
 players = players.sort((a, b) => b.score - a.score)
+
+var max_score = players[0].score
+
+var step_size = Math.round(max_score / 10) + 1
