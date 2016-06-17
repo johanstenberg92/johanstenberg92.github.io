@@ -29,8 +29,8 @@ var current_results = [[2, 1],
     [2, 1],
     [0, 2],
     [0, 0],
-    [],
-    [],
+    [1, 0],
+    [2, 2],
     [],
     [],
     [],
@@ -48,7 +48,7 @@ var current_results = [[2, 1],
     [],
     []
 ];
-var latest_game_update = "Germany - Poland (16th of June)";
+var latest_game_update = "Czech Republic - Croatia (17th of June)";
 var winner = undefined;
 var top_scorer = undefined;
 function compute_winner_and_top_scorer_score(winner_bet, top_scorer_bet) {
