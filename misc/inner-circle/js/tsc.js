@@ -46,7 +46,7 @@ var current_results = [[2, 1],
     [],
     [],
     [],
-    []
+    [] // #36 Sweden - Belgium
 ];
 var latest_game_update = "Spain - Turkey (17th of June)";
 var winner = undefined;
@@ -73,10 +73,13 @@ function compute_games_scores_evolution(score_bets) {
             if (home_score == betted_home_score && away_score == betted_away_score)
                 score = 3;
             else {
+                // tie
                 if ((home_score - away_score == 0) && (betted_home_score - betted_away_score == 0))
                     score = 1;
+                // home win
                 if (home_score > away_score && betted_home_score > betted_away_score)
                     score = 1;
+                // away win
                 if (home_score < away_score && betted_home_score < betted_away_score)
                     score = 1;
             }
@@ -127,7 +130,9 @@ var johan_s_bets = [[1, 0],
     [1, 0],
     [1, 1],
 ];
+// Championship Winner
 var johan_s_winner = "Germany";
+// Top Scorer
 var johan_s_top_scorer = "Thomas Muller";
 var johan_s_better = new Better("Johan S", johan_s_bets, johan_s_winner, johan_s_top_scorer);
 var leif_bets = [[2, 0],
@@ -167,7 +172,9 @@ var leif_bets = [[2, 0],
     [2, 0],
     [1, 1],
 ];
+// Championship Winner
 var leif_winner = "Germany";
+// Top Scorer
 var leif_top_scorer = "Thomas Muller";
 var leif_better = new Better("Leif", leif_bets, leif_winner, leif_top_scorer);
 var carl_bets = [[3, 0],
@@ -207,7 +214,9 @@ var carl_bets = [[3, 0],
     [1, 0],
     [3, 1],
 ];
+// Championship Winner
 var carl_winner = "Sweden";
+// Top Scorer
 var carl_top_scorer = "Thomas Muller";
 var carl_better = new Better("Carl", carl_bets, carl_winner, carl_top_scorer);
 var albin_bets = [[2, 0],
@@ -247,7 +256,9 @@ var albin_bets = [[2, 0],
     [0, 1],
     [1, 3],
 ];
+// Championship Winner
 var albin_winner = "Germany";
+// Top Scorer
 var albin_top_scorer = "Mario Gomez";
 var albin_better = new Better("Albin", albin_bets, albin_winner, albin_top_scorer);
 var alexander_bets = [[2, 0],
@@ -287,7 +298,9 @@ var alexander_bets = [[2, 0],
     [1, 0],
     [2, 1],
 ];
+// Championship Winner
 var alexander_winner = "France";
+// Top Scorer
 var alexander_top_scorer = "Thomas Muller";
 var alexander_better = new Better("Alexander", alexander_bets, alexander_winner, alexander_top_scorer);
 var anders_bets = [[3, 1],
@@ -327,7 +340,9 @@ var anders_bets = [[3, 1],
     [2, 1],
     [2, 1],
 ];
+// Championship Winner
 var anders_winner = "France";
+// Top Scorer
 var anders_top_scorer = "Zlatan Ibrahimovic";
 var anders_better = new Better("Anders", anders_bets, anders_winner, anders_top_scorer);
 var andreas_bets = [[3, 0],
@@ -367,7 +382,9 @@ var andreas_bets = [[3, 0],
     [2, 1],
     [1, 1],
 ];
+// Championship Winner
 var andreas_winner = "France";
+// Top Scorer
 var andreas_top_scorer = "Thomas Muller";
 var andreas_better = new Better("Andreas", andreas_bets, andreas_winner, andreas_top_scorer);
 var charlotta_bets = [[3, 0],
@@ -407,7 +424,9 @@ var charlotta_bets = [[3, 0],
     [2, 0],
     [2, 1],
 ];
+// Championship Winner
 var charlotta_winner = "France";
+// Top Scorer
 var charlotta_top_scorer = "Antoine Griezmann";
 var charlotta_better = new Better("Charlotta", charlotta_bets, charlotta_winner, charlotta_top_scorer);
 var dan_erik_bets = [[3, 1],
@@ -447,7 +466,9 @@ var dan_erik_bets = [[3, 1],
     [2, 0],
     [2, 2],
 ];
+// Championship Winner
 var dan_erik_winner = "France";
+// Top Scorer
 var dan_erik_top_scorer = "Paul Pogba";
 var dan_erik_better = new Better("Dan Erik", dan_erik_bets, dan_erik_winner, dan_erik_top_scorer);
 var david_bets = [[2, 0],
@@ -487,7 +508,9 @@ var david_bets = [[2, 0],
     [2, 0],
     [2, 2],
 ];
+// Championship Winner
 var david_winner = "Germany";
+// Top Scorer
 var david_top_scorer = "Mario Gomez";
 var david_better = new Better("David", david_bets, david_winner, david_top_scorer);
 var johan_c_bets = [[2, 0],
@@ -527,7 +550,9 @@ var johan_c_bets = [[2, 0],
     [2, 0],
     [1, 1],
 ];
+// Championship Winner
 var johan_c_winner = "Germany";
+// Top Scorer
 var johan_c_top_scorer = "Mario Gomez";
 var johan_c_better = new Better("Johan C", johan_c_bets, johan_c_winner, johan_c_top_scorer);
 var kholoud_bets = [[1, 0],
@@ -567,7 +592,9 @@ var kholoud_bets = [[1, 0],
     [2, 0],
     [0, 3],
 ];
+// Championship Winner
 var kholoud_winner = "Italy";
+// Top Scorer
 var kholoud_top_scorer = "Christiano Ronaldo";
 var kholoud_better = new Better("Kholoud", kholoud_bets, kholoud_winner, kholoud_top_scorer);
 var laleh_bets = [[2, 0],
@@ -607,7 +634,9 @@ var laleh_bets = [[2, 0],
     [2, 1],
     [0, 2],
 ];
+// Championship Winner
 var laleh_winner = "France";
+// Top Scorer
 var laleh_top_scorer = "Thomas Muller";
 var laleh_better = new Better("Laleh", laleh_bets, laleh_winner, laleh_top_scorer);
 var markus_bets = [[2, 0],
@@ -647,7 +676,9 @@ var markus_bets = [[2, 0],
     [2, 0],
     [1, 2],
 ];
+// Championship Winner
 var markus_winner = "Germany";
+// Top Scorer
 var markus_top_scorer = "Thomas Muller";
 var markus_better = new Better("Markus", markus_bets, markus_winner, markus_top_scorer);
 var martin_bets = [[2, 0],
@@ -687,7 +718,9 @@ var martin_bets = [[2, 0],
     [1, 0],
     [1, 3],
 ];
+// Championship Winner
 var martin_winner = "Germany";
+// Top Scorer
 var martin_top_scorer = "Thomas Muller";
 var martin_better = new Better("Martin", martin_bets, martin_winner, martin_top_scorer);
 var paul_bets = [[3, 0],
@@ -727,7 +760,9 @@ var paul_bets = [[3, 0],
     [1, 1],
     [2, 1],
 ];
+// Championship Winner
 var paul_winner = "Germany";
+// Top Scorer
 var paul_top_scorer = "Antoine Griezmann";
 var paul_better = new Better("Paul", paul_bets, paul_winner, paul_top_scorer);
 var torsten_bets = [[4, 0],
@@ -767,7 +802,9 @@ var torsten_bets = [[4, 0],
     [3, 0],
     [1, 3],
 ];
+// Championship Winner
 var torsten_winner = "France";
+// Top Scorer
 var torsten_top_scorer = "Olivier Giroud";
 var torsten_better = new Better("Torsten", torsten_bets, torsten_winner, torsten_top_scorer);
 var vittorio_bets = [[1, 0],
@@ -807,7 +844,9 @@ var vittorio_bets = [[1, 0],
     [1, 0],
     [0, 2],
 ];
+// Championship Winner
 var vittorio_winner = "Italy";
+// Top Scorer
 var vittorio_top_scorer = "Antoine Griezmann";
 var vittorio_better = new Better("Vittorio", vittorio_bets, vittorio_winner, vittorio_top_scorer);
 var players = [
