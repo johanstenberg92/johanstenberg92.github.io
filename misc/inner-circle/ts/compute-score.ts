@@ -24,8 +24,8 @@ var current_results = [[2, 1], // #1 France - Albania
   [0, 0], // #24 Portugal - Austria
   [0, 1], // #25 Romania - Albania
   [0, 0], // #26 Switzerland - France
-  [], // #27 Russia - Wales
-  [], // #28 Slovakia - England
+  [0, 3], // #27 Russia - Wales
+  [0, 0], // #28 Slovakia - England
   [], // #29 Ukraine - Poland
   [], // #30 Northern Ireland - Germany
   [], // #31 Czech Republic - Turkey
@@ -36,7 +36,7 @@ var current_results = [[2, 1], // #1 France - Albania
   [] // #36 Sweden - Belgium
 ];
 
-var latest_game_update = "Switzerland - France (19th of June)"
+var latest_game_update = "Slovakia - England (20th of June)"
 
 var winner: string = undefined
 

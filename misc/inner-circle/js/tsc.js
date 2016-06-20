@@ -37,8 +37,8 @@ var current_results = [[2, 1],
     [0, 0],
     [0, 1],
     [0, 0],
-    [],
-    [],
+    [0, 3],
+    [0, 0],
     [],
     [],
     [],
@@ -48,7 +48,7 @@ var current_results = [[2, 1],
     [],
     [] // #36 Sweden - Belgium
 ];
-var latest_game_update = "Switzerland - France (19th of June)";
+var latest_game_update = "Slovakia - England (20th of June)";
 var winner = undefined;
 var top_scorer = undefined;
 function compute_winner_and_top_scorer_score(winner_bet, top_scorer_bet) {
