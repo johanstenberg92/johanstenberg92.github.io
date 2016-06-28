@@ -34,6 +34,16 @@ var dan_erik_bets = [[3, 1], // #1 France - Albania
   [0, 3], // #34 Hungary - Portugal
   [2, 0], // #35 Italy - Ireland
   [2, 2], // #36 Sweden - Belgium
+  
+  // round of 16
+  [0, 0], // #37 Switzerland - Poland
+  [1, 0], // #38 Wales - Northern Ireland
+  [2, 1], // #39 Croatia - Portugal
+  [2, 0], // #40 France - Ireland
+  [1, 0], // #41 Germany - Slovakia
+  [0, 1], // #42 Hungary - Belgium
+  [0, 0], // #43 Italy - Spain
+  [1, 1], // #44 England - Iceland
 ];
 
 // Championship Winner

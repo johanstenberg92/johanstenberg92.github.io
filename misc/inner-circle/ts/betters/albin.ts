@@ -34,6 +34,16 @@ var albin_bets = [[2, 0], // #1 France - Albania
   [1, 4], // #34 Hungary - Portugal
   [0, 1], // #35 Italy - Ireland
   [1, 3], // #36 Sweden - Belgium
+
+  // round of 16
+  [1, 0], // #37 Switzerland - Poland
+  [2, 0], // #38 Wales - Northern Ireland
+  [1, 2], // #39 Croatia - Portugal
+  [2, 0], // #40 France - Ireland
+  [2, 0], // #41 Germany - Slovakia
+  [0, 1], // #42 Hungary - Belgium
+  [0, 1], // #43 Italy - Spain
+  [2, 0], // #44 England - Iceland
 ];
 
 // Championship Winner

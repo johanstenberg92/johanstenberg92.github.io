@@ -34,6 +34,16 @@ var johan_c_bets = [[2, 0], // #1 France - Albania
   [0, 1], // #34 Hungary - Portugal
   [2, 0], // #35 Italy - Ireland
   [1, 1], // #36 Sweden - Belgium
+  
+  // round of 16
+  [0, 1], // #37 Switzerland - Poland
+  [2, 1], // #38 Wales - Northern Ireland
+  [0, 1], // #39 Croatia - Portugal
+  [2, 0], // #40 France - Ireland
+  [2, 0], // #41 Germany - Slovakia
+  [0, 2], // #42 Hungary - Belgium
+  [1, 1], // #43 Italy - Spain
+  [1, 0], // #44 England - Iceland
 ];
 
 // Championship Winner

@@ -33,10 +33,20 @@ var current_results = [[2, 1], // #1 France - Albania
   [2, 1], // #33 Iceland - Austria
   [3, 3], // #34 Hungary - Portugal
   [0, 1], // #35 Italy - Ireland
-  [0, 1] // #36 Sweden - Belgium
+  [0, 1], // #36 Sweden - Belgium
+
+  // round of 16
+  [1, 1], // #37 Switzerland - Poland
+  [1, 0], // #38 Wales - Northern Ireland
+  [0, 0], // #39 Croatia - Portugal
+  [2, 1], // #40 France - Ireland
+  [3, 0], // #41 Germany - Slovakia
+  [0, 4], // #42 Hungary - Belgium
+  [2, 0], // #43 Italy - Spain
+  [1, 2], // #44 England - Iceland
 ];
 
-var latest_game_update = "Sweden - Belgium (22th of June)"
+var latest_game_update = "England - Iceland (28th of June)"
 
 var winner: string = undefined
 

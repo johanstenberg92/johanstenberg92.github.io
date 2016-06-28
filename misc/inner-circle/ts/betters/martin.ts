@@ -34,6 +34,16 @@ var martin_bets = [[2, 0], // #1 France - Albania
   [1, 1], // #34 Hungary - Portugal
   [1, 0], // #35 Italy - Ireland
   [1, 3], // #36 Sweden - Belgium
+  
+  // round of 16
+  [0, 0], // #37 Switzerland - Poland
+  [1, 0], // #38 Wales - Northern Ireland
+  [1, 0], // #39 Croatia - Portugal
+  [2, 0], // #40 France - Ireland
+  [2, 1], // #41 Germany - Slovakia
+  [0, 1], // #42 Hungary - Belgium
+  [0, 0], // #43 Italy - Spain
+  [0, 0], // #44 England - Iceland
 ];
 
 // Championship Winner

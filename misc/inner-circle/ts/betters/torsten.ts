@@ -34,6 +34,16 @@ var torsten_bets = [[4, 0], // #1 France - Albania
   [0, 2], // #34 Hungary - Portugal
   [3, 0], // #35 Italy - Ireland
   [1, 3], // #36 Sweden - Belgium
+  
+  // round of 16
+  [1, 1], // #37 Switzerland - Poland
+  [1, 1], // #38 Wales - Northern Ireland
+  [1, 1], // #39 Croatia - Portugal
+  [3, 0], // #40 France - Ireland
+  [1, 1], // #41 Germany - Slovakia
+  [1, 1], // #42 Hungary - Belgium
+  [0, 0], // #43 Italy - Spain
+  [0, 1], // #44 England - Iceland
 ];
 
 // Championship Winner

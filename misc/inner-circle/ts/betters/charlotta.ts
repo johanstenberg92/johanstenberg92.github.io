@@ -34,6 +34,16 @@ var charlotta_bets = [[3, 0], // #1 France - Albania
   [0, 3], // #34 Hungary - Portugal
   [2, 0], // #35 Italy - Ireland
   [2, 1], // #36 Sweden - Belgium
+  
+  // round of 16
+  [0, 1], // #37 Switzerland - Poland
+  [2, 1], // #38 Wales - Northern Ireland
+  [3, 2], // #39 Croatia - Portugal
+  [1, 1], // #40 France - Ireland
+  [2, 0], // #41 Germany - Slovakia
+  [1, 1], // #42 Hungary - Belgium
+  [0, 0], // #43 Italy - Spain
+  [0, 1], // #44 England - Iceland
 ];
 
 // Championship Winner
