@@ -46,7 +46,7 @@ var current_results = [[2, 1], // #1 France - Albania
   [1, 2], // #44 England - Iceland
 ];
 
-var latest_game_update = "England - Iceland (28th of June)"
+var latest_game_update = "England - Iceland (27th of June)"
 
 var winner: string = undefined
 

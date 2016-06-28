@@ -57,7 +57,7 @@ var current_results = [[2, 1],
     [2, 0],
     [1, 2],
 ];
-var latest_game_update = "England - Iceland (28th of June)";
+var latest_game_update = "England - Iceland (27th of June)";
 var winner = undefined;
 var top_scorer = undefined;
 function compute_winner_and_top_scorer_score(winner_bet, top_scorer_bet) {
