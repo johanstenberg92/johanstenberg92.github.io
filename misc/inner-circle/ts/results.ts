@@ -5,6 +5,7 @@ var players = [
     albin_better,
     alexander_better,
     anders_better,
+    andreas_better,
     charlotta_better,
     dan_erik_better,
     johan_c_better,
