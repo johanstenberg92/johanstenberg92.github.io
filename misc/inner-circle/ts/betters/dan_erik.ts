@@ -44,6 +44,12 @@ var dan_erik_bets = [[3, 1], // #1 France - Albania
   [0, 1], // #42 Hungary - Belgium
   [0, 0], // #43 Italy - Spain
   [1, 1], // #44 England - Iceland
+
+  // QF
+  [0, 0], // #45 Poland - Portugal
+  [0, 2], // #46 Wales - Belgium
+  [2, 0], // #47 Germany - Italy
+  [1, 1], // #48 France - Iceland
 ];
 
 // Championship Winner

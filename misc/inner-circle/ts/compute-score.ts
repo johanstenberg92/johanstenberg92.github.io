@@ -44,9 +44,15 @@ var current_results = [[2, 1], // #1 France - Albania
   [0, 4], // #42 Hungary - Belgium
   [2, 0], // #43 Italy - Spain
   [1, 2], // #44 England - Iceland
+
+  // QF
+  [1, 1], // #45 Poland - Portugal
+  [3, 1], // #46 Wales - Belgium
+  [1, 1], // #47 Germany - Italy
+  [5, 2], // #48 France - Iceland
 ];
 
-var latest_game_update = "England - Iceland (27th of June)"
+var latest_game_update = "France - Iceland (3rd of July)"
 
 var winner: string = undefined
 

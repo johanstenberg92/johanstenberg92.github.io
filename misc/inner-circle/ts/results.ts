@@ -11,6 +11,7 @@ var players = [
     johan_c_better,
     kholoud_better,
     laleh_better,
+    markus_better,
     martin_better,
     paul_better,
     torsten_better,

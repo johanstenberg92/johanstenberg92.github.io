@@ -44,6 +44,12 @@ var paul_bets = [[3, 0], // #1 France - Albania
   [1, 1], // #42 Hungary - Belgium
   [0, 1], // #43 Italy - Spain
   [1, 1], // #44 England - Iceland
+
+  // QF
+  [0, 1], // #45 Poland - Portugal
+  [1, 1], // #46 Wales - Belgium
+  [2, 0], // #47 Germany - Italy
+  [1, 1], // #48 France - Iceland
 ];
 
 // Championship Winner

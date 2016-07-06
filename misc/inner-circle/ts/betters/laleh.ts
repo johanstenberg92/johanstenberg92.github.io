@@ -44,6 +44,12 @@ var laleh_bets = [[2, 0], // #1 France - Albania
   [1, 2], // #42 Hungary - Belgium
   [0, 0], // #43 Italy - Spain
   [1, 1], // #44 England - Iceland
+
+  // QF
+  [1, 1], // #45 Poland - Portugal
+  [0, 2], // #46 Wales - Belgium
+  [1, 1], // #47 Germany - Italy
+  [2, 0], // #48 France - Iceland
 ];
 
 // Championship Winner

@@ -44,6 +44,12 @@ var anders_bets = [[3, 1], // #1 France - Albania
   [0, 2], // #42 Hungary - Belgium
   [1, 0], // #43 Italy - Spain
   [1, 1], // #44 England - Iceland
+
+  // QF
+  [0, 2], // #45 Poland - Portugal
+  [0, 2], // #46 Wales - Belgium
+  [0, 1], // #47 Germany - Italy
+  [1, 1], // #48 France - Iceland
 ];
 
 // Championship Winner

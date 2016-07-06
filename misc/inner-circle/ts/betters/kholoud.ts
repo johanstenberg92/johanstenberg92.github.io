@@ -44,6 +44,12 @@ var kholoud_bets = [[1, 0], // #1 France - Albania
   [1, 3], // #42 Hungary - Belgium
   [1, 0], // #43 Italy - Spain
   [3, 0], // #44 England - Iceland
+
+  // QF
+  [1, 1], // #45 Poland - Portugal
+  [2, 0], // #46 Wales - Belgium
+  [1, 2], // #47 Germany - Italy
+  [0, 1], // #48 France - Iceland
 ];
 
 // Championship Winner

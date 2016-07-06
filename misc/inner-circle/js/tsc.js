@@ -56,8 +56,13 @@ var current_results = [[2, 1],
     [0, 4],
     [2, 0],
     [1, 2],
+    // QF
+    [1, 1],
+    [3, 1],
+    [1, 1],
+    [5, 2],
 ];
-var latest_game_update = "England - Iceland (27th of June)";
+var latest_game_update = "France - Iceland (3rd of July)";
 var winner = undefined;
 var top_scorer = undefined;
 function compute_winner_and_top_scorer_score(winner_bet, top_scorer_bet) {
@@ -147,6 +152,11 @@ var johan_s_bets = [[1, 0],
     [0, 1],
     [0, 1],
     [1, 0],
+    // QF
+    [0, 1],
+    [0, 1],
+    [1, 1],
+    [2, 0],
 ];
 // Championship Winner
 var johan_s_winner = "Germany";
@@ -195,6 +205,11 @@ var leif_bets = [[2, 0],
     [2, 1],
     [2, 1],
     [2, 0],
+    [1, 3],
+    [1, 1],
+    [1, 1],
+    // QF
+    [1, 2],
     [1, 3],
     [1, 1],
     [1, 1],
@@ -249,6 +264,11 @@ var carl_bets = [[3, 0],
     [1, 2],
     [1, 0],
     [2, 1],
+    // QF
+    [0, 1],
+    [0, 1],
+    [1, 1],
+    [2, 0],
 ];
 // Championship Winner
 var carl_winner = "Sweden";
@@ -299,6 +319,11 @@ var albin_bets = [[2, 0],
     [2, 0],
     [0, 1],
     [0, 1],
+    [2, 0],
+    // QF
+    [0, 1],
+    [1, 1],
+    [2, 1],
     [2, 0],
 ];
 // Championship Winner
@@ -351,6 +376,11 @@ var alexander_bets = [[2, 0],
     [1, 2],
     [2, 2],
     [1, 1],
+    // QF
+    [2, 2],
+    [1, 3],
+    [2, 1],
+    [3, 1],
 ];
 // Championship Winner
 var alexander_winner = "France";
@@ -401,6 +431,11 @@ var anders_bets = [[3, 1],
     [1, 1],
     [0, 2],
     [1, 0],
+    [1, 1],
+    // QF
+    [0, 2],
+    [0, 2],
+    [0, 1],
     [1, 1],
 ];
 // Championship Winner
@@ -453,6 +488,11 @@ var andreas_bets = [[3, 0],
     [1, 2],
     [1, 1],
     [1, 0],
+    // QF
+    [1, 2],
+    [0, 1],
+    [1, 2],
+    [3, 1],
 ];
 // Championship Winner
 var andreas_winner = "France";
@@ -504,6 +544,11 @@ var charlotta_bets = [[3, 0],
     [1, 1],
     [0, 0],
     [0, 1],
+    // QF
+    [],
+    [],
+    [],
+    [],
 ];
 // Championship Winner
 var charlotta_winner = "France";
@@ -554,6 +599,11 @@ var dan_erik_bets = [[3, 1],
     [1, 0],
     [0, 1],
     [0, 0],
+    [1, 1],
+    // QF
+    [0, 0],
+    [0, 2],
+    [2, 0],
     [1, 1],
 ];
 // Championship Winner
@@ -606,6 +656,11 @@ var johan_c_bets = [[2, 0],
     [0, 2],
     [1, 1],
     [1, 0],
+    // QF
+    [2, 1],
+    [1, 2],
+    [1, 1],
+    [3, 1],
 ];
 // Championship Winner
 var johan_c_winner = "Germany";
@@ -657,6 +712,11 @@ var kholoud_bets = [[1, 0],
     [1, 3],
     [1, 0],
     [3, 0],
+    // QF
+    [1, 1],
+    [2, 0],
+    [1, 2],
+    [0, 1],
 ];
 // Championship Winner
 var kholoud_winner = "Italy";
@@ -708,12 +768,73 @@ var laleh_bets = [[2, 0],
     [1, 2],
     [0, 0],
     [1, 1],
+    // QF
+    [1, 1],
+    [0, 2],
+    [1, 1],
+    [2, 0],
 ];
 // Championship Winner
 var laleh_winner = "France";
 // Top Scorer
 var laleh_top_scorer = "Thomas Muller";
 var laleh_better = new Better("Laleh", laleh_bets, laleh_winner, laleh_top_scorer);
+var markus_bets = [[2, 0],
+    [0, 2],
+    [1, 2],
+    [1, 2],
+    [1, 2],
+    [1, 0],
+    [3, 0],
+    [2, 0],
+    [0, 2],
+    [0, 1],
+    [1, 0],
+    [2, 0],
+    [2, 0],
+    [2, 1],
+    [3, 0],
+    [2, 0],
+    [2, 0],
+    [3, 0],
+    [2, 1],
+    [1, 1],
+    [2, 0],
+    [2, 0],
+    [1, 0],
+    [2, 0],
+    [2, 0],
+    [1, 1],
+    [3, 0],
+    [0, 1],
+    [0, 1],
+    [0, 2],
+    [1, 0],
+    [1, 2],
+    [1, 2],
+    [0, 3],
+    [2, 0],
+    [1, 2],
+    // round of 16
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    // QF
+    [1, 0],
+    [1, 2],
+    [1, 1],
+    [1, 1],
+];
+// Championship Winner
+var markus_winner = "Germany";
+// Top Scorer
+var markus_top_scorer = "Thomas Muller";
+var markus_better = new Better("Markus", markus_bets, markus_winner, markus_top_scorer);
 var martin_bets = [[2, 0],
     [2, 2],
     [2, 1],
@@ -759,6 +880,11 @@ var martin_bets = [[2, 0],
     [0, 1],
     [0, 0],
     [0, 0],
+    // QF
+    [0, 0],
+    [1, 2],
+    [2, 0],
+    [2, 0],
 ];
 // Championship Winner
 var martin_winner = "Germany";
@@ -809,6 +935,11 @@ var paul_bets = [[3, 0],
     [2, 0],
     [1, 1],
     [0, 1],
+    [1, 1],
+    // QF
+    [0, 1],
+    [1, 1],
+    [2, 0],
     [1, 1],
 ];
 // Championship Winner
@@ -861,6 +992,11 @@ var torsten_bets = [[4, 0],
     [1, 1],
     [0, 0],
     [0, 1],
+    // QF
+    [2, 1],
+    [1, 1],
+    [1, 2],
+    [3, 0],
 ];
 // Championship Winner
 var torsten_winner = "France";
@@ -912,6 +1048,11 @@ var vittorio_bets = [[1, 0],
     [0, 2],
     [1, 1],
     [1, 0],
+    // QF
+    [0, 0],
+    [0, 1],
+    [0, 1],
+    [1, 1],
 ];
 // Championship Winner
 var vittorio_winner = "Italy";
@@ -931,6 +1072,7 @@ var players = [
     johan_c_better,
     kholoud_better,
     laleh_better,
+    markus_better,
     martin_better,
     paul_better,
     torsten_better,
